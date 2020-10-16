@@ -1,0 +1,26 @@
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.main-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: black;
+    position: sticky;
+    height: 100px;
+    top: 0;
+    width: 100%;
+    transition: .2s;
+}
+
+.form-input {
+    display: flex;
+
+}

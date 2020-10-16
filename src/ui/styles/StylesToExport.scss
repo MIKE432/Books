@@ -1,0 +1,80 @@
+@import 'VolumeComponentStyles.module.scss';
+@import 'VolumeListStyle.module.scss';
+@import 'LandingPageStyles.module.scss';
+@import 'Media.scss';
+@import 'TextComponentsStyles.module.scss';
+
+
+h1 {
+    font-size: 20px;
+    margin: 0px;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0px;
+    text-align: justify;
+}
+
+h3 {
+    font-size: 11px;
+    margin: 0px;
+    text-align: justify;
+}
+
+h4{
+    color: grey;
+    font-size: 11px;
+    margin: 0px;
+    text-align: justify;
+}
+
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+@keyframes rotating {
+    from {
+
+      transform: rotate(0deg);
+    }
+    to {
+
+      transform: rotate(-360deg);
+    }
+  }
+
+.loading-component-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    margin: 5px 0 0 5px;
+}
+
+.loading-component-container > div {
+    background-image: url("../../drawable/loading-arrow.png");
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    animation: rotating 1s linear infinite;
+}
+
+.center-content {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.empty-state-component-volumes-list {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
