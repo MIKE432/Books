@@ -8,7 +8,8 @@ export class FormComponent extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            q: ""
+            q: "",
+            authors: ""
         }
     }
     handleSumit = e => {
@@ -27,7 +28,7 @@ export class FormComponent extends React.Component {
                             <Text 
                                 value={this.state.q} 
                                 onChange={(e) => { 
-                                    this.setState({ q: e.target.value })
+                                    this.setState({ ...this.state, q: e.target.value })
                                     const filters = { ...this.state, q: e.target.value }
                                     this.props.handleSubmit(filters)
                                 }}
@@ -39,11 +40,25 @@ export class FormComponent extends React.Component {
                             />
                         </Col>
                         <Col>
+                            <Text 
+                                value={this.state.authors} 
+                                onChange={(e) => { 
+                                    this.setState({ ...this.state, authors: e.target.value })
+                                    const filters = { ...this.state, authors: e.target.value }
+                                    this.props.handleSubmit(filters)
+                                }}
+                                className="form-control input-error" 
+                                name='authors' 
+                                placeholder="Autorzy"
+                                isErrorConditionBlock={value => false} 
+                            />
+                        </Col>
+                        <Col>
                             <select 
                                 className='browser-default custom-select'
                                 name='langRestrict'
                                 onChange={(e) => { 
-                                    this.setState({ q: this.state.q, langRestrict: e.target.value }) 
+                                    this.setState({ ...this.state, filter: this.state.filter }) 
                                     const filters = { ...this.state, langRestrict: e.target.value }
                                     this.props.handleSubmit(filters)
                                 }}

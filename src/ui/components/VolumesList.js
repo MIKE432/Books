@@ -18,7 +18,7 @@ const useSearch = (filters, page) => {
 
     useEffect(() => {
 
-        console.log("Start call")
+        console.log(filters)
         setInProgress(true)
         setIsError(false)
         if(filters.q === '') return
@@ -82,8 +82,10 @@ const VolumesList = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inProgress, hasMore])
 
-    const filterChanged = (formikValues) => {
-        setFilters(prevFilters => ({ q: formikValues.q, langRestrict: formikValues.langRestrict, maxResults: prevFilters.maxResults * page }))
+    const filterChanged = (values) => {
+        const q = values.q + ( values.authors !== "" ? "+inauthors=" + values.authors : "")
+        setFilters(prevFilters => ({ q: q , langRestrict: values.langRestrict, maxResults: elementsPerPage }))
+        setPage(0)
     }
 
     return (
