@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormComponent /> should match snapshot 1`] = `
+<div
+  className="form-main-container"
+>
+  <div
+    className="search-title-container"
+  >
+    <div
+      className="search-title-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-arrow-left fa-2x hover-icon"
+      />
+    </div>
+    <div
+      className="search-title"
+    >
+      <h1>
+        My Liblary
+      </h1>
+      <h3>
+        Wyszukaj
+      </h3>
+    </div>
+    <div
+      className="search-title-icon hover-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-filter fa-2x hover-icon"
+      />
+    </div>
+  </div>
+  <form
+    className="main-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="exit-filters-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-times"
+      />
+    </div>
+    <Row
+      lg={4}
+      noGutters={false}
+      sm="4"
+      xs={1}
+    >
+      <Col
+        xs="12"
+      >
+        <Text
+          className="form-control input-error"
+          errorMsg="Brak tytułu"
+          isErrorConditionBlock={[Function]}
+          name="q"
+          onChange={[Function]}
+          placeholder="Tytuł"
+        />
+      </Col>
+      <Col
+        xs="12"
+      >
+        <Text
+          className="form-control input-error"
+          isErrorConditionBlock={[Function]}
+          name="authors"
+          onChange={[Function]}
+          placeholder="Autorzy"
+        />
+      </Col>
+      <Col
+        xs="12"
+      >
+        <select
+          className="browser-default custom-select"
+          name="langRestrict"
+          onChange={[Function]}
+          placeholder="Język"
+        >
+          <option
+            key="0"
+            label="Wybierz Język"
+            value=""
+          />
+          <option
+            key="1"
+            label="Polski"
+            value="pl"
+          />
+          <option
+            key="2"
+            label="Angielski"
+            value="en"
+          />
+          <option
+            key="3"
+            label="Włoski"
+            value="it"
+          />
+          <option
+            key="4"
+            label="Hiszpański"
+            value="es"
+          />
+          <option
+            key="5"
+            label="Portugalski"
+            value="pt"
+          />
+          <option
+            key="6"
+            label="Niemiecki"
+            value="de"
+          />
+          <option
+            key="7"
+            label="Rosyjski"
+            value="ru"
+          />
+          <option
+            key="8"
+            label="Francuski"
+            value="fr"
+          />
+          <option
+            key="9"
+            label="Fiński"
+            value="fi"
+          />
+          <option
+            key="10"
+            label="Szwedzki"
+            value="sv"
+          />
+          <option
+            key="11"
+            label="Słowacki"
+            value="sl"
+          />
+          <option
+            key="12"
+            label="Norweski"
+            value="no"
+          />
+        </select>
+      </Col>
+      <Col
+        xs="12"
+      >
+        <select
+          className="browser-default custom-select"
+          name="filter"
+          onChange={[Function]}
+          placeholder="Język"
+        >
+          <option
+            label="Typ e-booka"
+            value={null}
+          />
+          <option
+            label="Darmowe"
+            value="free-ebooks"
+          />
+          <option
+            label="Płatne"
+            value="paid-ebooks"
+          />
+          <option
+            label="Darmowe i płatne"
+            value="ebooks"
+          />
+        </select>
+      </Col>
+      <Col
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        xs="12"
+      >
+        <button
+          className="btn btn-success"
+          disabled={true}
+          onClick={[Function]}
+          type="submit"
+        >
+          Filtruj
+        </button>
+      </Col>
+    </Row>
+  </form>
+</div>
+`;
+
+exports[`<VolumeComponent /> should match snapshot 1`] = `
+<div
+  className="volume-container"
+>
+  <div
+    className="img-container"
+  >
+    <img
+      alt=""
+      src="book.png"
+    />
+  </div>
+  <div
+    className="additional-info-container"
+  >
+    <h2>
+      <LinesEllipsis
+        basedOn="letters"
+        className=""
+        component="div"
+        ellipsis="..."
+        maxLine="2"
+        onReflow={[Function]}
+        text=""
+        trimRight={true}
+      />
+    </h2>
+    <h4
+      className="h4-description"
+    >
+      <LinesEllipsis
+        basedOn="letters"
+        className=""
+        component="div"
+        ellipsis="..."
+        maxLine="2"
+        onReflow={[Function]}
+        text="Brak Opisu"
+        trimRight={true}
+      />
+    </h4>
+    <h4
+      id="autors"
+    >
+      Autorzy: 
+    </h4>
+    <h4 />
+    <div
+      className="price"
+    >
+      <p
+        id="not-for-sale"
+      >
+        Nie na sprzedaż
+      </p>
+    </div>
+  </div>
+</div>
+`;
