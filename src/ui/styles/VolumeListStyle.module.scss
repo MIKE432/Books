@@ -7,20 +7,114 @@
     justify-content: center;
 }
 
+.form-main-container {
+    position: sticky;
+    top: 0px;
+}
+
 .main-form {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
     color: black;
-    position: sticky;
-    height: 100px;
+    height: fit-content;
+    padding-bottom: 10px;
     top: 0;
     width: 100%;
-    transition: .2s;
+
+    @include for-phone-only {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+
+    } 
+
+    .col-12 {
+        @include for-phone-only {
+            padding: 10px;
+            width: min-content;
+        } 
+    }
+    .form-col {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        display: none;
+
+        @include for-phone-only {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+    }
+
+
 }
 
 .form-input {
     display: flex;
 
+}
+
+.search-title {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+
+    @include for-phone-only {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    h1 {
+        color: white;
+    }
+    
+    h3 {
+        color: white;
+    }
+}
+
+.search-title-container {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    .search-title-icon {
+        display: none;
+
+        @include for-phone-only {
+            width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: black;
+        } 
+
+    }
+}
+
+.exit-filters-icon {
+    display: none;
+
+    @include for-phone-only {
+        display: flex;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+}
+
+.display-none {
+    display: none;
 }

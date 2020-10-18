@@ -38,3 +38,5 @@ export const mapBookToViewModel = (book) => {
         isFree: saleInfo && saleInfo.saleability === 'FREE'
     }
 }
+
+export const smallDeviceBreakPoint = 576

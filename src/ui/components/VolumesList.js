@@ -17,8 +17,6 @@ const useSearch = (filters, page) => {
     }, [filters])
 
     useEffect(() => {
-
-        console.log(filters)
         setInProgress(true)
         setIsError(false)
         if(filters.q === '') return
@@ -83,14 +81,14 @@ const VolumesList = (props) => {
     }, [inProgress, hasMore])
 
     const filterChanged = (values) => {
-        const q = values.q + ( values.authors !== "" ? "+inauthors=" + values.authors : "")
-        setFilters(prevFilters => ({ q: q , langRestrict: values.langRestrict, maxResults: elementsPerPage }))
+        const q = values.q + ( values.authors !== "" ? "+inauthors:" + values.authors : "")
+        setFilters({ q: q , langRestrict: values.langRestrict, maxResults: elementsPerPage })
         setPage(0)
     }
 
     return (
         <div>
-            <FormComponent {...props} handleSubmit={filterChanged}  />
+            <FormComponent   {...props} handleSubmit={filterChanged}  />
 
             {
                 filters.q !== '' ? <div className="list-container">

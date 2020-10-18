@@ -3,16 +3,13 @@ import LinesEllipsis from 'react-lines-ellipsis'
 
 export default (props) => {
     const { 
-        title, 
-        subtitle, 
+        title,  
         authors, 
         smallThumbnail, 
-        language, 
         description, 
         publishedDate,
         price,
         currency,
-        buyLink,
         isForSale,
         isFree,
         Ref } = props
